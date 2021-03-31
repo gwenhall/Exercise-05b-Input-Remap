@@ -1,16 +1,3 @@
-# Exercise-05b-Input-Remap
-Exercise for MSCH-C220, 29 March 2021
-
-A demonstration of this exercise is available at [https://youtu.be/R4gtS6BL4yA](https://youtu.be/R4gtS6BL4yA)
-
-This exercise is a chance to further explore input mapping and to adjust that mapping using GDScript
-
-Fork this repository. When that process has completed, make sure that the top of the repository reads [your username]/Exercise-05b-Input-Remap. *Edit the LICENSE and replace BL-MSCH-C220-S21 with your full name.* Commit your changes.
-
-Clone the repository to a Local Path on your computer.
-
-Open Godot. Import the project.godot file and open the "Input Remap" project.
-
 In UI/ActionRemapButton.gd, insert the following at line 32 (replacing the # Input remapping goes here):
 ```
 	InputMap.action_erase_events(action)
