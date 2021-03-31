@@ -1,56 +1,6 @@
 # Exercise-05b-Input-Remap
 Exercise for MSCH-C220, 29 March 2021
 
-A demonstration of this exercise is available at [https://youtu.be/R4gtS6BL4yA](https://youtu.be/R4gtS6BL4yA)
-
-This exercise is a chance to further explore input mapping and to adjust that mapping using GDScript
-
-Fork this repository. When that process has completed, make sure that the top of the repository reads [your username]/Exercise-05b-Input-Remap. *Edit the LICENSE and replace BL-MSCH-C220-S21 with your full name.* Commit your changes.
-
-Clone the repository to a Local Path on your computer.
-
-Open Godot. Import the project.godot file and open the "Input Remap" project.
-
-In UI/ActionRemapButton.gd, insert the following at line 32 (replacing the # Input remapping goes here):
-```
-	InputMap.action_erase_events(action)
-	InputMap.action_add_event(action, event)
-```
-
-As always, ensure you are indenting with tabs instead of spaces.
-
-In Global.gd, replace the load_input() and save_input() methods (starting on line 24) with the following:
-```
-func load_input():
-	var error = save_file.load(SAVE_PATH)
-	if error != OK:
-		print("Failed loading file")
-		return
-	
-	for i in inputs:
-		var key = save_file.get_value("Inputs", i, null)
-		InputMap.action_erase_events(i)
-		InputMap.action_add_event(i, key)
-
-func save_input():
-	for i in inputs:
-		var actions = InputMap.get_action_list(i)
-		for a in actions:
-			save_file.set_value("Inputs", i, a)
-	save_file.save(SAVE_PATH)
-```
-
-Play the "game" and press Escape to bring up the menu. Change the controls to the arrow keys and close the menu (by pressing escape). See that the changes have been reflected. Then quit and reload the game; the controls should have persisted into the new game.
-
-Quit Godot. In GitHub desktop, add a summary message, commit your changes and push them back to GitHub. If you return to and refresh your GitHub repository page, you should now see your updated files with the time when they were changed.
-
-Now edit the README.md file. When you have finished editing, commit your changes, and then turn in the URL of the main repository page (https://github.com/[username]/Exercise-05b-Input-Remap) on Canvas.
-
-The final state of the file should be as follows (replacing the "Created by" information with your name):
-```
-# Exercise-05b-Input-Remap
-Exercise for MSCH-C220, 29 March 2021
-
 An example of input remapping, saved to a config file, in Godot
 
 ## Implementation
@@ -63,5 +13,4 @@ This project borrows heavily from the [input_mapping Godot Demo Project](https:/
 None
 
 ## Created by 
-Jason Francis
-```
+Gwen Hall
