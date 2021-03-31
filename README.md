@@ -29,11 +29,6 @@ func save_input():
 
 Play the "game" and press Escape to bring up the menu. Change the controls to the arrow keys and close the menu (by pressing escape). See that the changes have been reflected. Then quit and reload the game; the controls should have persisted into the new game.
 
-Quit Godot. In GitHub desktop, add a summary message, commit your changes and push them back to GitHub. If you return to and refresh your GitHub repository page, you should now see your updated files with the time when they were changed.
-
-Now edit the README.md file. When you have finished editing, commit your changes, and then turn in the URL of the main repository page (https://github.com/[username]/Exercise-05b-Input-Remap) on Canvas.
-
-The final state of the file should be as follows (replacing the "Created by" information with your name):
 ```
 # Exercise-05b-Input-Remap
 Exercise for MSCH-C220, 29 March 2021
@@ -50,5 +45,4 @@ This project borrows heavily from the [input_mapping Godot Demo Project](https:/
 None
 
 ## Created by 
-Jason Francis
-```
+Gwen Hall
